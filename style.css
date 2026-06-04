@@ -100,3 +100,33 @@ button:hover{
     font-size:12px;
     opacity:0.6;
 }
+
+.bridge{
+    position:fixed;
+    inset:0;
+    background:black;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    font-family:system-ui, Arial;
+}
+
+.message h1{
+    font-size:22px;
+    margin-bottom:10px;
+    opacity:1;
+    animation:fade 1s ease-in-out infinite alternate;
+}
+
+.message p{
+    opacity:0.7;
+}
+
+@keyframes fade{
+    from{opacity:1;}
+    to{opacity:0.4;}
+}

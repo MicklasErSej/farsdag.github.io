@@ -45,16 +45,45 @@ function next(){
 
 function finish(){
 
-    card.innerHTML = `
-        <h1>Mission Complete 🎉</h1>
+    // fade out current card
+    card.style.transition = "0.4s ease";
+    card.style.opacity = "0";
+    card.style.transform = "translateY(10px)";
 
-        <p>
-        Well done Dad.<br><br>
-        Your birthday surprise is ready.
-        </p>
+    setTimeout(() => {
 
-        <button onclick="window.location.href='www.google.com'">
-            Open Gift
-        </button>
-    `;
+        card.innerHTML = `
+            <h1>Mission Complete 🎉</h1>
+
+            <p style="margin-top:10px;">
+                Well done Dad.<br><br>
+                Your birthday surprise is ready.
+            </p>
+
+            <button id="giftBtn" style="opacity:0; transform:translateY(10px);">
+                Open Gift
+            </button>
+        `;
+
+        // fade in new content
+        setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+
+            const btn = document.getElementById("giftBtn");
+
+            btn.onclick = () => {
+                window.location.href = "YOUR-GIFT-LINK";
+            };
+
+            // smooth button reveal
+            setTimeout(() => {
+                btn.style.transition = "0.5s ease";
+                btn.style.opacity = "1";
+                btn.style.transform = "translateY(0)";
+            }, 150);
+
+        }, 50);
+
+    }, 400);
 }

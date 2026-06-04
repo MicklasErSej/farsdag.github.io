@@ -18,6 +18,54 @@ const questions = [
 {
     q: "Final question: are you ready?",
     a: ["Yes", "Absolutely", "Let’s go"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+},
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
 }
 ];
 

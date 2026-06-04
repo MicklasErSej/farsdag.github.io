@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Birthday Mission</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="particles"></div>
@@ -15,34 +15,26 @@
 
     <div class="card">
 
-        <div class="top">
+        <div id="content">
 
-            <div class="question-counter">
-                Question <span id="current">1</span>/<span id="total">8</span>
-            </div>
+            <h1 class="title">Birthday Mission</h1>
 
-            <div class="progress">
-                <div id="progress-fill"></div>
-            </div>
+            <p class="subtitle">
+                Welcome Dad.<br>
+                A gift is waiting.<br>
+                Complete the mission to unlock it.
+            </p>
+
+            <button id="startBtn">Begin</button>
 
         </div>
 
-        <div id="content">
+        <div class="progress">
+            <div id="progress-fill"></div>
+        </div>
 
-            <h1 class="title">
-                Birthday Mission
-            </h1>
-
-            <p class="subtitle">
-                Welcome Dad.
-                A gift has been prepared.
-                Access requires completion of a highly scientific questionnaire.
-            </p>
-
-            <button class="start-btn" onclick="startMission()">
-                Begin
-            </button>
-
+        <div class="question-counter">
+            Question <span id="current">0</span>/<span id="total">0</span>
         </div>
 
     </div>
@@ -50,6 +42,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

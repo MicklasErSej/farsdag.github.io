@@ -111,7 +111,7 @@ function showQuestion(){
     const q = questions[current];
 
     content.innerHTML = `
-        <h2>Question ${current + 1}</h2>
+        <h2>Spørgsmål ${current + 1}</h2>
 
         <p style="margin-top:10px; opacity:0.8;">
             ${q.q}

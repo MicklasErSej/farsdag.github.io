@@ -73,7 +73,7 @@ function finish(){
             const btn = document.getElementById("giftBtn");
 
             btn.onclick = () => {
-                window.location.href = "YOUR-GIFT-LINK";
+                window.location.href = "https://www.google.com";
             };
 
             // smooth button reveal

@@ -78,10 +78,6 @@ const questions = [
 {
     q: "How ready are you for today's mission?",
     a: ["Very ready", "Somewhat ready", "Not ready but excited"]
-},
-{
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
 }
 ];
 

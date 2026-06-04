@@ -7,59 +7,90 @@
 body{
     background:#050505;
     color:white;
-    font-family:Arial,sans-serif;
+    font-family:system-ui, -apple-system, Arial;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+}
+
+/* soft animated glow background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
+    animation:float 10s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+@keyframes float{
+    from{transform:translateY(0);}
+    to{transform:translateY(-20px);}
 }
 
 .container{
     width:100%;
-    max-width:500px;
+    max-width:520px;
     padding:20px;
+    z-index:2;
 }
 
 .card{
     background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:20px;
-    padding:25px;
-    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    padding:28px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
 .title{
+    font-size:1.8rem;
     margin-bottom:10px;
+    letter-spacing:0.5px;
 }
 
 .subtitle{
-    opacity:0.8;
-    line-height:1.5;
+    opacity:0.75;
+    line-height:1.6;
+    font-size:0.95rem;
 }
 
 button{
     width:100%;
-    padding:15px;
+    padding:14px;
+    margin-top:12px;
     border:none;
-    border-radius:12px;
+    border-radius:14px;
     background:white;
     color:black;
-    font-weight:bold;
-    font-size:16px;
+    font-weight:600;
+    font-size:15px;
     cursor:pointer;
-    margin-top:15px;
+    transition:0.2s;
 }
 
 button:hover{
-    transform:scale(1.02);
+    transform:translateY(-2px);
 }
 
 .progress{
-    height:8px;
+    height:6px;
     background:#222;
-    border-radius:10px;
+    border-radius:50px;
     overflow:hidden;
-    margin-top:20px;
+    margin-top:18px;
 }
 
 #progress-fill{
@@ -71,10 +102,11 @@ button:hover{
 
 .question-counter{
     margin-top:10px;
-    opacity:0.7;
+    opacity:0.6;
+    font-size:0.85rem;
 }
 
-/* CINEMATIC FINAL */
+/* cinematic ending stays clean */
 .cinema{
     background:black;
     color:white;
@@ -91,35 +123,28 @@ button:hover{
 #glitchText{
     font-size:18px;
     letter-spacing:2px;
-    animation:blink 0.8s infinite;
+    opacity:0.9;
+    animation:blink 1s infinite;
 }
 
 @keyframes blink{
-    0%{opacity:1;}
-    50%{opacity:0.3;}
-    100%{opacity:1;}
+    0%,100%{opacity:1;}
+    50%{opacity:0.4;}
 }
 
 #subText{
-    margin-top:20px;
+    margin-top:18px;
     white-space:pre-line;
     opacity:0.85;
     line-height:1.6;
 }
 
-.noise{
-    position:absolute;
-    inset:0;
-    background:radial-gradient(circle,rgba(255,255,255,0.05),transparent);
-    pointer-events:none;
-}
-
 .finalReveal{
     height:100vh;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
     background:black;
     color:white;
     text-align:center;

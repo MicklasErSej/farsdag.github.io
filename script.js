@@ -76,8 +76,8 @@ const questions = [
     a: ["Musik", "Sollys", "Frisk luft"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Glædelig Farsdag, Vi elsker dig!",
+    a: ["Vidre til Gaven"]
 }
 ];
 

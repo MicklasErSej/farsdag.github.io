@@ -1,24 +1,20 @@
 const questions = [
 {
     q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but curious"]
+    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
 },
-
 {
     q: "Pick a companion:",
     a: ["A Viking", "A Golden Retriever", "Three raccoons"]
 },
-
 {
     q: "Choose a superpower:",
     a: ["Flying", "Mind reading", "Unlimited snacks"]
 },
-
 {
     q: "Energy level check:",
-    a: ["100%", "Needs coffee", "Send help"]
+    a: ["100%", "Need coffee", "Send help"]
 },
-
 {
     q: "Final question: are you ready?",
     a: ["Yes", "Absolutely", "Let’s go"]
@@ -28,6 +24,7 @@ const questions = [
 let current = 0;
 
 const card = document.getElementById("card");
+const totalQuestions = questions.length;
 
 document.getElementById("startBtn").addEventListener("click", start);
 
@@ -37,12 +34,9 @@ function start(){
 
 function showQuestion(){
 
-    const percent = Math.round((current / totalQuestions) * 100);
-
-    document.getElementById("questionBar").style.width = percent + "%";
-    document.getElementById("progressText").innerText = percent + "%";
-
     const q = questions[current];
+
+    updateProgress();
 
     card.innerHTML = `
         <h1>Question ${current + 1}</h1>
@@ -52,17 +46,21 @@ function showQuestion(){
         </p>
 
         <div style="margin-top:20px;">
-            ${q.a.map(answer => `
-                <button onclick="next()">
-                    ${answer}
-                </button>
+            ${q.a.map(ans => `
+                <button onclick="next()">${ans}</button>
             `).join("")}
         </div>
     `;
 }
 
-function next(){
+function updateProgress(){
+    const percent = Math.round((current / totalQuestions) * 100);
 
+    document.getElementById("questionBar").style.width = percent + "%";
+    document.getElementById("progressText").innerText = percent + "%";
+}
+
+function next(){
     current++;
 
     if(current >= questions.length){
@@ -73,12 +71,8 @@ function next(){
     showQuestion();
 }
 
-const totalQuestions = questions.length;
-
 function finish(){
 
-    // smooth fade out first
-    card.style.transition = "0.7s ease";
     card.style.opacity = "0";
     card.style.transform = "translateY(10px)";
 
@@ -87,47 +81,27 @@ function finish(){
         card.innerHTML = `
             <h1>Mission Complete 🎉</h1>
 
-            <p style="margin-top:10px; opacity:0.8;">
-                Well done Dad.<br><br>
-                Preparing your gift...
+            <p style="margin-top:10px;">
+                Your surprise is ready.
             </p>
 
-            <button id="giftBtn" style="opacity:0; transform:translateY(10px);">
+            <button id="giftBtn">
                 Open Gift
             </button>
         `;
 
-        // fade card back in
-        setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
 
-            const btn = document.getElementById("giftBtn");
+        document.getElementById("giftBtn").onclick = () => {
 
-            btn.onclick = () => {
+            document.body.style.transition = "0.5s ease";
+            document.body.style.opacity = "0";
 
-                document.body.innerHTML = `
-                    <div class="bridge">
-                        <div class="message">
-                            <h1>Opening Gift...</h1>
-                            <p>Please wait while we prepare your surprise.</p>
-                        </div>
-                    </div>
-                `;
-
-                setTimeout(() => {
-                    window.location.href = "https://YOUR-GIFT-LINK";
-                }, 2500);
-            };
-
-            // button fade-in
             setTimeout(() => {
-                btn.style.transition = "0.5s ease";
-                btn.style.opacity = "1";
-                btn.style.transform = "translateY(0)";
-            }, 150);
-
-        }, 50);
+                window.location.href = "https://YOUR-GIFT-LINK";
+            }, 500);
+        };
 
     }, 400);
 }

@@ -99,13 +99,18 @@ function finish(){
 
             btn.onclick = () => {
 
-                // smooth exit transition
-                document.body.style.transition = "0.3s ease";
-                document.body.style.opacity = "0";
+                document.body.innerHTML = `
+                    <div class="bridge">
+                        <div class="message">
+                            <h1>Opening Gift...</h1>
+                            <p>Please wait while we prepare your surprise.</p>
+                        </div>
+                    </div>
+                `;
 
                 setTimeout(() => {
                     window.location.href = "https://YOUR-GIFT-LINK";
-                }, 300);
+                }, 2500);
             };
 
             // button fade-in

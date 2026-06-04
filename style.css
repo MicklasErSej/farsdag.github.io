@@ -90,17 +90,21 @@ button{
     font-size:15px;
     font-weight:600;
     cursor:pointer;
-    transition:0.2s ease;
+
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    box-shadow: 0 6px 0 #d9d9d9;
 }
 
-button:active{
-    transform:scale(0.98);
-}
-
+/* hover (desktop only feel) */
 button:hover{
-    transform:translateY(-2px);
+    transform: translateY(-1px);
 }
 
+/* 👇 REAL "PHYSICAL PRESS" EFFECT */
+button:active{
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #d9d9d9;
+}
 /* PROGRESS BAR */
 .topbar{
     margin-top:20px;

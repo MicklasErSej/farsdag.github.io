@@ -26,12 +26,16 @@ let current = 0;
 const content = document.getElementById("content");
 const total = questions.length;
 
-document.getElementById("startBtn").addEventListener("click", start);
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("startBtn").addEventListener("click", start);
+});
 
 function start(){
     current = 0;
     showQuestion();
 }
+
+window.start = start;
 
 function showQuestion(){
 

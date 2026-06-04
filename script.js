@@ -171,7 +171,7 @@ function finish(){
         `;
 
         setTimeout(() => {
-            window.location.href = "https://www.google.com";
+            window.location.href = "https://nordjyskemuseer.dk/u/regan-vest/";
         }, 2500);
     };
 }

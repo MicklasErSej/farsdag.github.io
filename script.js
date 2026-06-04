@@ -105,7 +105,7 @@ function finish(){
 
                 setTimeout(() => {
                     window.location.href = "https://YOUR-GIFT-LINK";
-                }, 500);
+                }, 300);
             };
 
             // button fade-in

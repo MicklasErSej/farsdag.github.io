@@ -1,43 +1,43 @@
 const questions = [
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvorfor fejrer man fars dag?",
+    a: ["For at vise dig taknemmelighed og påskønne dig", "Fordi det gør man i Danmark på grundlovsdag", "For at fejre fædre og deres betydning for familien"]
 },
 {
-    q: "Pick a companion:",
-    a: ["A Viking", "A Golden Retriever", "Three raccoons"]
+    q: "Hvor stammer fars dag fra?",
+    a: ["Danmark", "USA", "Tyskland"]
 },
 {
-    q: "Choose a superpower:",
-    a: ["Flying", "Mind reading", "Unlimited snacks"]
+    q: "Hvorfor hedder det grundlovsdag?",
+    a: ["Er Danmarks nationaldag, som blev indført af Gunnar", "Grundloven blev underskrevet", "Danmarks grundlov blev vedtaget"]
 },
 {
-    q: "Energy level check:",
-    a: ["100%", "Need coffee", "Send help"]
+    q: "Hvilket år blev Danmarks Grundlov vedtaget og underskrevet?",
+    a: ["5. juni 1849", "5. juni 1920", "5. juni 1947"]
 },
 {
-    q: "Final question: are you ready?",
-    a: ["Yes", "Absolutely", "Let’s go"]
+    q: "Er Danmark mest dækket af skov, marker eller vand set oppefra ?",
+    a: ["Skov", "Marker", "Vand"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Da grundloven blev skrevet under i 1949, var også?",
+    a: ["Treårskrigen", "Hedebølge over Danmark", "Den kolde krig"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad vil du stå bedst fast i, hvis vejret er lidt ustadigt ?",
+    a: ["Sikkerhedssko", "Skechers sko", "Yeezy Slides"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad holder bedst på varmen - samme temp hele året",
+    a: ["70 meter under jorden", "300 - 500 meter over jorden", "begge steder holder samme temptratur"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvis du skal befinde dig i menneskeskabt konstruktion, vil du så helst i ?",
+    a: ["En ting af flet", "En ting af plastik", "En ting af beton"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Du skal med os på en oplevelse, hvis du bliver bange, vil du så…",
+    a: ["Nægte at tage med", "Passe på os, selvom du er bange", "Tænke det har jeg aldrig prøvet før, det bliver fedt"]
 },
 {
     q: "How ready are you for today's mission?",

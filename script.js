@@ -95,11 +95,16 @@ function finish(){
 
     document.getElementById("giftBtn").onclick = () => {
 
-        document.body.style.transition = "0.5s ease";
-        document.body.style.opacity = "0";
+    document.body.innerHTML = `
+        <div class="bridge">
+            <div class="message">
+                <h1>Opening Gift</h1>
+                <p>Please wait...</p>
+            </div>
+        </div>
+    `;
 
-        setTimeout(() => {
-            window.location.href = "https://YOUR-GIFT-LINK";
-        }, 500);
-    };
-}
+    setTimeout(() => {
+        window.location.href = "https://YOUR-GIFT-LINK";
+    }, 2500);
+};

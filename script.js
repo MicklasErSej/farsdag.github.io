@@ -20,7 +20,7 @@ const questions = [
     a: ["Skov", "Marker", "Vand"]
 },
 {
-    q: "Da grundloven blev skrevet under i 1949, var også?",
+    q: "Da grundloven blev skrevet under i 1849, var der også?",
     a: ["Treårskrigen", "Hedebølge over Danmark", "Den kolde krig"]
 },
 {

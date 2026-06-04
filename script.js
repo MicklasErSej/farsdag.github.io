@@ -145,31 +145,27 @@ function updateProgress(){
 
 function revealGift(){
 
-    document.getElementById("progress-fill")
-    .style.width = "100%";
+    document.body.innerHTML = `
+    <div class="cinema">
+        <div class="noise"></div>
 
-    content.innerHTML = `
-    <div class="reveal">
+        <div class="center">
+            <div id="glitchText">PROCESSING RESULTS</div>
+        </div>
 
-        <h1>🎉 GIFT UNLOCKED 🎉</h1>
-
-        <p>
-        Congratulations.<br><br>
-
-        The questionnaire confirms that you are,
-        in fact, Dad.<br><br>
-
-        Your birthday gift is ready.
-        </p>
-
-        <button
-        class="gift-btn"
-        onclick="window.open('https://YOUR-GIFT-LINK-HERE.com')">
-
-        Open Gift
-
-        </button>
-
+        <div id="subText"></div>
     </div>
     `;
+
+    setTimeout(() => {
+        document.getElementById("glitchText").innerText = "VERIFYING DAD STATUS";
+    }, 1500);
+
+    setTimeout(() => {
+        document.getElementById("glitchText").innerText = "ACCESSING FINAL FILE";
+    }, 3000);
+
+    setTimeout(() => {
+        typeReveal();
+    }, 4500);
 }

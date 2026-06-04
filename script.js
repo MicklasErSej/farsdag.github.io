@@ -40,12 +40,12 @@ const questions = [
     a: ["Nægte at tage med", "Passe på os, selvom du er bange", "Tænke det har jeg aldrig prøvet før, det bliver fedt"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad er det vigtigste for dig, hvis panikken kommer…",
+    a: ["Luft", "Historie", "Sikkerhed"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad vil du helst undgå ?",
+    a: ["Dårlig luft", "Regnvejr", "Kø"]
 },
 {
     q: "How ready are you for today's mission?",

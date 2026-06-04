@@ -17,19 +17,14 @@
 
 <div class="wrap">
 
-    <div class="card">
+    <div class="card" id="card">
 
-        <h1>Birthday Mission</h1>
-
-        <!-- PROGRESS BAR (NEVER DELETED) -->
-        <div class="topbar">
-            <div class="progress-track">
-                <div class="progress-fill" id="questionBar"></div>
-            </div>
-            <div class="progress-text" id="progressText">0%</div>
+        <!-- HEADER (WILL DISAPPEAR) -->
+        <div id="header">
+            <h1>Birthday Mission</h1>
         </div>
 
-        <!-- ONLY THIS PART WILL CHANGE -->
+        <!-- CONTENT -->
         <div id="content">
             <p>
                 Welcome Dad.<br>
@@ -38,6 +33,14 @@
             </p>
 
             <button id="startBtn">Begin</button>
+        </div>
+
+        <!-- PROGRESS BAR MOVED TO BOTTOM -->
+        <div class="topbar" id="progressWrap" style="display:none;">
+            <div class="progress-track">
+                <div class="progress-fill" id="questionBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
         </div>
 
     </div>

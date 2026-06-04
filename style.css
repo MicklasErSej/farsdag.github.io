@@ -7,166 +7,120 @@
 body{
     background:#050505;
     color:white;
-    font-family:Inter,Arial,sans-serif;
-    overflow:hidden;
-    min-height:100vh;
-}
-
-.container{
-    min-height:100vh;
+    font-family:Arial,sans-serif;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
     padding:20px;
-    position:relative;
-    z-index:2;
 }
 
 .card{
-    width:100%;
-    max-width:500px;
-
     background:rgba(255,255,255,0.05);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    border-radius:28px;
-
-    padding:30px;
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.5);
-
-    animation:fadeIn .8s ease;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
 }
 
-.top{
-    margin-bottom:25px;
+.title{
+    margin-bottom:10px;
 }
 
-.question-counter{
-    opacity:.6;
-    margin-bottom:12px;
+.subtitle{
+    opacity:0.8;
+    line-height:1.5;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:black;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    transform:scale(1.02);
 }
 
 .progress{
     height:8px;
     background:#222;
-    border-radius:20px;
+    border-radius:10px;
     overflow:hidden;
+    margin-top:20px;
 }
 
 #progress-fill{
-    width:0%;
     height:100%;
+    width:0%;
     background:white;
-    transition:.5s;
+    transition:0.4s;
 }
 
-.title{
-    font-size:2rem;
-    margin-bottom:15px;
+.question-counter{
+    margin-top:10px;
+    opacity:0.7;
 }
 
-.subtitle{
-    line-height:1.6;
-    opacity:.8;
-}
-
-button{
-    width:100%;
-    border:none;
-    border-radius:18px;
-    padding:18px;
-    margin-top:15px;
-    background:white;
-    color:black;
-    font-size:1rem;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
-}
-
-button:hover{
-    transform:translateY(-2px);
-}
-
-.question{
-    font-size:1.6rem;
-    line-height:1.4;
-    margin-bottom:25px;
-}
-
-.answer-btn{
-    background:#111;
+/* CINEMATIC FINAL */
+.cinema{
+    background:black;
     color:white;
-    border:1px solid rgba(255,255,255,.1);
-}
-
-.answer-btn:hover{
-    background:#1b1b1b;
-}
-
-.fade-out{
-    opacity:0;
-    transform:translateY(20px);
-}
-
-.fade-in{
-    opacity:1;
-    transform:translateY(0);
-}
-
-#content{
-    transition:.35s;
-}
-
-.particles{
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,.05), transparent 25%),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,.04), transparent 25%),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,.04), transparent 25%);
-    animation:float 12s infinite alternate ease-in-out;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(0);
-    }
-    to{
-        transform:translateY(-30px);
-    }
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.reveal{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
     text-align:center;
+    font-family:monospace;
+    padding:20px;
 }
 
-.reveal h1{
-    font-size:2.4rem;
-    margin-bottom:20px;
+#glitchText{
+    font-size:18px;
+    letter-spacing:2px;
+    animation:blink 0.8s infinite;
 }
 
-.reveal p{
-    opacity:.8;
-    line-height:1.7;
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0.3;}
+    100%{opacity:1;}
 }
 
-.gift-btn{
-    margin-top:30px;
+#subText{
+    margin-top:20px;
+    white-space:pre-line;
+    opacity:0.85;
+    line-height:1.6;
+}
+
+.noise{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle,rgba(255,255,255,0.05),transparent);
+    pointer-events:none;
+}
+
+.finalReveal{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:black;
+    color:white;
+    text-align:center;
 }

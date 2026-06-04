@@ -37,6 +37,11 @@ function start(){
 
 function showQuestion(){
 
+    const percent = Math.round((current / totalQuestions) * 100);
+
+    document.getElementById("questionBar").style.width = percent + "%";
+    document.getElementById("progressText").innerText = percent + "%";
+
     const q = questions[current];
 
     card.innerHTML = `

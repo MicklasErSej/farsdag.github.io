@@ -35,7 +35,11 @@ function start(){
     showQuestion();
 }
 
-window.start = start;
+document.addEventListener("click", function(e){
+    if(e.target && e.target.id === "startBtn"){
+        start();
+    }
+});
 
 function showQuestion(){
 

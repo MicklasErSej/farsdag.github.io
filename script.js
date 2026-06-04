@@ -48,32 +48,32 @@ const questions = [
     a: ["Dårlig luft", "Regnvejr", "Kø"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad ville være et problem, hvis du oplever noget der ikke fungerede ?",
+    a: ["Ventilationen", "Belysningen", "Parkeringen"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvordan ser du dig selv som far ?",
+    a: ["Kærlig og omsorgsfuld", "forstående og gavmild", "Som verdens bedste far"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad er det vigtigste for menneske at have adgang til ?",
+    a: ["Luft", "Chokolade", "Wifi"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad ville du kigge mest efter på en klar dag ?",
+    a: ["Horisonten", "Himlen", "Jorden"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvilket af disse ord forbinder mest med hemmeligholdelse ?",
+    a: ["Offentlig", "Hemmelig", "Synlig"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad ville du far kigge mest efter, hvis du havde en fantastisk udsigt?",
+    a: ["Landskabet", "Hvor bilen holder", "Mobilen"]
 },
 {
-    q: "How ready are you for today's mission?",
-    a: ["Very ready", "Somewhat ready", "Not ready but excited"]
+    q: "Hvad er det vigtigste i et lukket rum over længere tid ?",
+    a: ["Musik", "Sollys", "Frisk luft"]
 },
 {
     q: "How ready are you for today's mission?",

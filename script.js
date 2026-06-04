@@ -68,6 +68,8 @@ function next(){
     showQuestion();
 }
 
+const totalQuestions = questions.length;
+
 function finish(){
 
     // smooth fade out first

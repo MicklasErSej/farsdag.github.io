@@ -53,7 +53,7 @@ function finish(){
         Your birthday surprise is ready.
         </p>
 
-        <button onclick="window.location.href='YOUR-GIFT-LINK'">
+        <button onclick="window.location.href='www.google.com'">
             Open Gift
         </button>
     `;

@@ -23,44 +23,49 @@ const questions = [
 
 let current = 0;
 
-const card = document.getElementById("card");
-const totalQuestions = questions.length;
+const content = document.getElementById("content");
+const total = questions.length;
 
 document.getElementById("startBtn").addEventListener("click", start);
 
 function start(){
+    current = 0;
     showQuestion();
 }
 
 function showQuestion(){
 
-    const q = questions[current];
-
     updateProgress();
 
-    card.innerHTML = `
-        <h1>Question ${current + 1}</h1>
+    const q = questions[current];
+
+    content.innerHTML = `
+        <h2>Question ${current + 1}</h2>
 
         <p style="margin-top:10px; opacity:0.8;">
             ${q.q}
         </p>
 
         <div style="margin-top:20px;">
-            ${q.a.map(ans => `
-                <button onclick="next()">${ans}</button>
+            ${q.a.map((ans, i) => `
+                <button onclick="next()">
+                    ${ans}
+                </button>
             `).join("")}
         </div>
     `;
 }
 
 function updateProgress(){
-    const percent = Math.round((current / totalQuestions) * 100);
+
+    const percent = Math.round((current / total) * 100);
 
     document.getElementById("questionBar").style.width = percent + "%";
     document.getElementById("progressText").innerText = percent + "%";
 }
 
 function next(){
+
     current++;
 
     if(current >= questions.length){
@@ -73,35 +78,28 @@ function next(){
 
 function finish(){
 
-    card.style.opacity = "0";
-    card.style.transform = "translateY(10px)";
+    document.getElementById("questionBar").style.width = "100%";
+    document.getElementById("progressText").innerText = "100%";
 
-    setTimeout(() => {
+    content.innerHTML = `
+        <h2>Mission Complete 🎉</h2>
 
-        card.innerHTML = `
-            <h1>Mission Complete 🎉</h1>
+        <p style="margin-top:10px;">
+            Your surprise is ready.
+        </p>
 
-            <p style="margin-top:10px;">
-                Your surprise is ready.
-            </p>
+        <button id="giftBtn">
+            Open Gift
+        </button>
+    `;
 
-            <button id="giftBtn">
-                Open Gift
-            </button>
-        `;
+    document.getElementById("giftBtn").onclick = () => {
 
-        card.style.opacity = "1";
-        card.style.transform = "translateY(0)";
+        document.body.style.transition = "0.5s ease";
+        document.body.style.opacity = "0";
 
-        document.getElementById("giftBtn").onclick = () => {
-
-            document.body.style.transition = "0.5s ease";
-            document.body.style.opacity = "0";
-
-            setTimeout(() => {
-                window.location.href = "https://YOUR-GIFT-LINK";
-            }, 500);
-        };
-
-    }, 400);
+        setTimeout(() => {
+            window.location.href = "https://YOUR-GIFT-LINK";
+        }, 500);
+    };
 }

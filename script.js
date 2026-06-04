@@ -26,20 +26,23 @@ let current = 0;
 const content = document.getElementById("content");
 const total = questions.length;
 
+/* =========================
+   START BUTTON (SAFE)
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("startBtn").addEventListener("click", start);
+    const startBtn = document.getElementById("startBtn");
+
+    if (startBtn) {
+        startBtn.addEventListener("click", start);
+    }
 });
+
+/* ========================= */
 
 function start(){
     current = 0;
     showQuestion();
 }
-
-document.addEventListener("click", function(e){
-    if(e.target && e.target.id === "startBtn"){
-        start();
-    }
-});
 
 function showQuestion(){
 
@@ -55,17 +58,14 @@ function showQuestion(){
         </p>
 
         <div style="margin-top:20px;">
-            ${q.a.map((ans, i) => `
-                <button onclick="next()">
-                    ${ans}
-                </button>
+            ${q.a.map(ans => `
+                <button onclick="next()">${ans}</button>
             `).join("")}
         </div>
     `;
 }
 
 function updateProgress(){
-
     const percent = Math.round((current / total) * 100);
 
     document.getElementById("questionBar").style.width = percent + "%";
@@ -73,7 +73,6 @@ function updateProgress(){
 }
 
 function next(){
-
     current++;
 
     if(current >= questions.length){
@@ -96,23 +95,22 @@ function finish(){
             Your surprise is ready.
         </p>
 
-        <button id="giftBtn">
-            Open Gift
-        </button>
+        <button id="giftBtn">Open Gift</button>
     `;
 
     document.getElementById("giftBtn").onclick = () => {
 
-    document.body.innerHTML = `
-        <div class="bridge">
-            <div class="message">
-                <h1>Opening Gift</h1>
-                <p>Please wait...</p>
+        document.body.innerHTML = `
+            <div class="bridge">
+                <div class="message">
+                    <h1>Opening Gift</h1>
+                    <p>Please wait...</p>
+                </div>
             </div>
-        </div>
-    `;
+        `;
 
-    setTimeout(() => {
-        window.location.href = "https://YOUR-GIFT-LINK";
-    }, 2500);
-};
+        setTimeout(() => {
+            window.location.href = "https://YOUR-GIFT-LINK";
+        }, 2500);
+    };
+}

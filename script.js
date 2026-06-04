@@ -111,7 +111,7 @@ function finish(){
         `;
 
         setTimeout(() => {
-            window.location.href = "https://YOUR-GIFT-LINK";
+            window.location.href = "https://www.google.com";
         }, 2500);
     };
 }

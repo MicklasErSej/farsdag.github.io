@@ -26,21 +26,21 @@ let current = 0;
 const content = document.getElementById("content");
 const total = questions.length;
 
-/* =========================
-   START BUTTON (SAFE)
-========================= */
+/* START */
 document.addEventListener("DOMContentLoaded", () => {
-    const startBtn = document.getElementById("startBtn");
-
-    if (startBtn) {
-        startBtn.addEventListener("click", start);
-    }
+    document.getElementById("startBtn").addEventListener("click", start);
 });
 
-/* ========================= */
-
 function start(){
+
     current = 0;
+
+    // hide title
+    document.getElementById("header").style.display = "none";
+
+    // show progress bar
+    document.getElementById("progressWrap").style.display = "block";
+
     showQuestion();
 }
 
@@ -65,6 +65,7 @@ function showQuestion(){
     `;
 }
 
+/* PROGRESS BAR */
 function updateProgress(){
     const percent = Math.round((current / total) * 100);
 

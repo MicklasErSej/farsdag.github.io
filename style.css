@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Consolas, monospace;
+}
+
+body{
+    background:#050505;
+    color:#00ff66;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.radar{
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle,
+    rgba(0,255,100,.1) 0%,
+    transparent 60%);
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.container{
+    z-index:10;
+    width:800px;
+    max-width:90%;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    letter-spacing:4px;
+    text-shadow:0 0 20px #00ff66;
+}
+
+.mission-box{
+    background:rgba(0,0,0,.8);
+    border:2px solid #00ff66;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 30px #00ff66;
+}
+
+#question{
+    min-height:120px;
+    font-size:1.3rem;
+    line-height:1.6;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    background:black;
+    color:#00ff66;
+    border:1px solid #00ff66;
+    font-size:18px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:15px;
+    background:#00ff66;
+    color:black;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.progress{
+    margin-top:25px;
+    height:15px;
+    background:#222;
+    border-radius:20px;
+}
+
+#bar{
+    width:0%;
+    height:100%;
+    background:#00ff66;
+    border-radius:20px;
+    transition:.5s;
+}

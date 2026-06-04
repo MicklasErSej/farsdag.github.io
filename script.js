@@ -1,9 +1,28 @@
 const questions = [
-"How ready are you for today's mission?",
-"Pick a companion:",
-"Choose a power:",
-"Energy level check:",
-"Final question: are you ready?"
+{
+    q: "How ready are you for today's mission?",
+    a: ["Very ready", "Somewhat ready", "Not ready but curious"]
+},
+
+{
+    q: "Pick a companion:",
+    a: ["A Viking", "A Golden Retriever", "Three raccoons"]
+},
+
+{
+    q: "Choose a superpower:",
+    a: ["Flying", "Mind reading", "Unlimited snacks"]
+},
+
+{
+    q: "Energy level check:",
+    a: ["100%", "Needs coffee", "Send help"]
+},
+
+{
+    q: "Final question: are you ready?",
+    a: ["Yes", "Absolutely", "Let’s go"]
+}
 ];
 
 let current = 0;
@@ -18,16 +37,22 @@ function start(){
 
 function showQuestion(){
 
+    const q = questions[current];
+
     card.innerHTML = `
         <h1>Question ${current + 1}</h1>
 
-        <p style="margin-top:10px;">
-            ${questions[current]}
+        <p style="margin-top:10px; opacity:0.8;">
+            ${q.q}
         </p>
 
-        <button onclick="next()">Option 1</button>
-        <button onclick="next()">Option 2</button>
-        <button onclick="next()">Option 3</button>
+        <div style="margin-top:20px;">
+            ${q.a.map(answer => `
+                <button onclick="next()">
+                    ${answer}
+                </button>
+            `).join("")}
+        </div>
     `;
 }
 
@@ -45,7 +70,7 @@ function next(){
 
 function finish(){
 
-    // fade out current card
+    // smooth fade out first
     card.style.transition = "0.4s ease";
     card.style.opacity = "0";
     card.style.transform = "translateY(10px)";
@@ -55,9 +80,9 @@ function finish(){
         card.innerHTML = `
             <h1>Mission Complete 🎉</h1>
 
-            <p style="margin-top:10px;">
+            <p style="margin-top:10px; opacity:0.8;">
                 Well done Dad.<br><br>
-                Your birthday surprise is ready.
+                Preparing your gift...
             </p>
 
             <button id="giftBtn" style="opacity:0; transform:translateY(10px);">
@@ -65,7 +90,7 @@ function finish(){
             </button>
         `;
 
-        // fade in new content
+        // fade card back in
         setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
@@ -73,10 +98,17 @@ function finish(){
             const btn = document.getElementById("giftBtn");
 
             btn.onclick = () => {
-                window.location.href = "https://www.google.com";
+
+                // smooth exit transition
+                document.body.style.transition = "0.5s ease";
+                document.body.style.opacity = "0";
+
+                setTimeout(() => {
+                    window.location.href = "https://YOUR-GIFT-LINK";
+                }, 500);
             };
 
-            // smooth button reveal
+            // button fade-in
             setTimeout(() => {
                 btn.style.transition = "0.5s ease";
                 btn.style.opacity = "1";

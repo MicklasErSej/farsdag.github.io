@@ -71,7 +71,7 @@ function next(){
 function finish(){
 
     // smooth fade out first
-    card.style.transition = "0.4s ease";
+    card.style.transition = "0.7s ease";
     card.style.opacity = "0";
     card.style.transform = "translateY(10px)";
 
@@ -100,7 +100,7 @@ function finish(){
             btn.onclick = () => {
 
                 // smooth exit transition
-                document.body.style.transition = "0.5s ease";
+                document.body.style.transition = "0.3s ease";
                 document.body.style.opacity = "0";
 
                 setTimeout(() => {

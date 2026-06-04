@@ -150,13 +150,13 @@ function finish(){
     document.getElementById("progressText").innerText = "100%";
 
     content.innerHTML = `
-        <h2>Mission Complete 🎉</h2>
+        <h2>Du klaret den. 🎉</h2>
 
         <p style="margin-top:10px;">
-            Your surprise is ready.
+            Din gave er klar!.
         </p>
 
-        <button id="giftBtn">Open Gift</button>
+        <button id="giftBtn">Åben Gaven</button>
     `;
 
     document.getElementById("giftBtn").onclick = () => {
@@ -164,8 +164,8 @@ function finish(){
         document.body.innerHTML = `
             <div class="bridge">
                 <div class="message">
-                    <h1>Opening Gift</h1>
-                    <p>Please wait...</p>
+                    <h1>Håber du bliver glad!</h1>
+                    <p>Verdens Bedste Far!</p>
                 </div>
             </div>
         `;

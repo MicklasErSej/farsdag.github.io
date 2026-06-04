@@ -16,7 +16,7 @@ const questions = [
     a: ["5. juni 1849", "5. juni 1920", "5. juni 1947"]
 },
 {
-    q: "Er Danmark mest dækket af skov, marker eller vand set oppefra ?",
+    q: "Er Danmark mest dækket af skov, marker eller vand set oppefra?",
     a: ["Skov", "Marker", "Vand"]
 },
 {
@@ -24,15 +24,15 @@ const questions = [
     a: ["Treårskrigen", "Hedebølge over Danmark", "Den kolde krig"]
 },
 {
-    q: "Hvad vil du stå bedst fast i, hvis vejret er lidt ustadigt ?",
+    q: "Hvad vil du stå bedst fast i, hvis vejret er lidt ustadigt?",
     a: ["Sikkerhedssko", "Skechers sko", "Yeezy Slides"]
 },
 {
-    q: "Hvad holder bedst på varmen - samme temp hele året",
+    q: "Hvad holder bedst på varmen - samme temp hele året?",
     a: ["70 meter under jorden", "300 - 500 meter over jorden", "begge steder holder samme temptratur"]
 },
 {
-    q: "Hvis du skal befinde dig i menneskeskabt konstruktion, vil du så helst i ?",
+    q: "Hvis du skal befinde dig i menneskeskabt konstruktion, vil du så helst i?",
     a: ["En ting af flet", "En ting af plastik", "En ting af beton"]
 },
 {
@@ -44,27 +44,27 @@ const questions = [
     a: ["Luft", "Historie", "Sikkerhed"]
 },
 {
-    q: "Hvad vil du helst undgå ?",
+    q: "Hvad vil du helst undgå?",
     a: ["Dårlig luft", "Regnvejr", "Kø"]
 },
 {
-    q: "Hvad ville være et problem, hvis du oplever noget der ikke fungerede ?",
+    q: "Hvad ville være et problem, hvis du oplever noget der ikke fungerede?",
     a: ["Ventilationen", "Belysningen", "Parkeringen"]
 },
 {
-    q: "Hvordan ser du dig selv som far ?",
-    a: ["Kærlig og omsorgsfuld", "forstående og gavmild", "Som verdens bedste far"]
+    q: "Hvordan ser du dig selv som far?",
+    a: ["Kærlig og omsorgsfuld", "Forstående og gavmild", "Som verdens bedste far"]
 },
 {
-    q: "Hvad er det vigtigste for menneske at have adgang til ?",
+    q: "Hvad er det vigtigste for menneske at have adgang til?",
     a: ["Luft", "Chokolade", "Wifi"]
 },
 {
-    q: "Hvad ville du kigge mest efter på en klar dag ?",
+    q: "Hvad ville du kigge mest efter på en klar dag?",
     a: ["Horisonten", "Himlen", "Jorden"]
 },
 {
-    q: "Hvilket af disse ord forbinder mest med hemmeligholdelse ?",
+    q: "Hvilket af disse ord forbinder mest med hemmeligholdelse?",
     a: ["Offentlig", "Hemmelig", "Synlig"]
 },
 {
@@ -72,7 +72,7 @@ const questions = [
     a: ["Landskabet", "Hvor bilen holder", "Mobilen"]
 },
 {
-    q: "Hvad er det vigtigste i et lukket rum over længere tid ?",
+    q: "Hvad er det vigtigste i et lukket rum over længere tid?",
     a: ["Musik", "Sollys", "Frisk luft"]
 },
 {
